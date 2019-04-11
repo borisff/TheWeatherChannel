@@ -17,7 +17,7 @@ Como  primer objetivo es poder manejar la información que está a nuestra dispo
 <ol>
 <li> A medida que pase el tiempo y se pueda ir obteniendo información de distintos años, la idea es poder generar comparaciones del comportamiento climático, y estudiar los cambios que estos puedan vivir en sus distintas temporadas en distintos años.</li>
 
-<li> Ya al tener la información otro objetivo a largo plazo (también se puede realizar en el corto plazo) es poder comparar la información de esta página , con otras dedicadas a actividades similares y generar una comparación entre estas, por ejemplo co:
+<li> Ya al tener la información, otro objetivo a largo plazo (también se puede realizar en el corto plazo) es poder comparar la información de esta página, con otras dedicadas a actividades similares y generar una comparación entre estas, por ejemplo con:
   
   [MeteoChile](http://www.meteochile.gob.cl/PortalDMC-web/index.xhtml) </li>
   
