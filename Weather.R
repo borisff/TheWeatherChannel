@@ -23,6 +23,14 @@ temperaturaLimpia <- gsub("°",";",temperatura)
 #creamos la tabla 
 tablaDatos <- data.frame(dias = dia, temperaturas = temperaturaLimpia)
 
+#####################################################################################
+#--------------------------ERROR------------------------------------------------
+#################################################################################
 #intentamos separar la temperatura en dos columnas una mayor temp y una menor temp.
 library(stringr)
 str_split_fixed(tablaDatos$temperaturas,";")
+##################################################################################
+###############################################################################
+
+#guardo los datos
+write.table(tablaDatos, file="tabla29dejunio.csv", sep = ";")
