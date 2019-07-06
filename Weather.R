@@ -33,4 +33,4 @@ str_split_fixed(tablaDatos$temperaturas,";")
 ###############################################################################
 
 #guardo los datos
-write.table(tablaDatos, file="tablajulio03.csv", sep = ";")
+write.table(tablaDatos, file="tablajulio06.csv", sep = ";")
