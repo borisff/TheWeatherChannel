@@ -27,10 +27,10 @@ tablaDatos <- data.frame(dias = dia, temperaturas = temperaturaLimpia)
 #--------------------------ERROR------------------------------------------------
 #################################################################################
 #intentamos separar la temperatura en dos columnas una mayor temp y una menor temp.
-library(stringr)
-str_split_fixed(tablaDatos$temperaturas,";")
+#library(stringr)
+#str_split_fixed(tablaDatos$temperaturas,";")
 ##################################################################################
 ###############################################################################
 
 #guardo los datos
-write.table(tablaDatos, file="tablajulio06.csv", sep = ";")
+write.table(tablaDatos, file="tablajulio11.csv", sep = ";")
