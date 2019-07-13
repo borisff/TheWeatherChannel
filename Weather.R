@@ -33,4 +33,4 @@ tablaDatos <- data.frame(dias = dia, temperaturas = temperaturaLimpia)
 ###############################################################################
 
 #guardo los datos
-write.table(tablaDatos, file="tablajulio11.csv", sep = ";")
+write.table(tablaDatos, file="tablajulio12.csv", sep = ";")
