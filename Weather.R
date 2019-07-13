@@ -34,3 +34,20 @@ tablaDatos <- data.frame(dias = dia, temperaturas = temperaturaLimpia)
 
 #guardo los datos
 write.table(tablaDatos, file="tablajulio12.csv", sep = ";")
+
+#################################################################################
+
+
+tablajulio01$dias <- paste(tablajulio01$dias,"julio")
+
+variable <- strsplit(tablajulio01$temperaturas,split = "\;")
+lista <- list()
+
+for(datos in tablajulio01$temperaturas){
+  datos01 <- (unlist(strsplit(datos,";")))
+  datos02 <- as.numeric(datos01)
+  lista <- unlist(c(lista,mean(datos02)))
+  
+}
+
+tablaLimpia01 <- data.frame(tablajulio01,lista)
