@@ -33,21 +33,29 @@ tablaDatos <- data.frame(dias = dia, temperaturas = temperaturaLimpia)
 ###############################################################################
 
 #guardo los datos
-write.table(tablaDatos, file="tablajulio13.csv", sep = ";")
+write.table(tablaDatos, file="tablajulio15.csv", sep = ";")
 
 #################################################################################
 
+# a la tabla que importamos le pegamos el mes
+tablajulio15$dias <- paste(tablajulio15$dias,"julio")
 
-tablajulio01$dias <- paste(tablajulio01$dias,"julio")
+#separamos
+variable <- strsplit(tablajulio15$temperaturas,split = "\;")
 
-variable <- strsplit(tablajulio01$temperaturas,split = "\;")
+#cremos lista vacia
 lista <- list()
 
-for(datos in tablajulio01$temperaturas){
+#optenemos el promedio 
+for(datos in tablajulio15$temperaturas){
   datos01 <- (unlist(strsplit(datos,";")))
   datos02 <- as.numeric(datos01)
   lista <- unlist(c(lista,mean(datos02)))
   
 }
+#juntamos la tabla con la lista de promedios 
+tablaLimpia15 <- data.frame(tablajulio15,lista)
 
-tablaLimpia01 <- data.frame(tablajulio01,lista)
+#guardamos
+#guardo los datos
+write.table(tablaLimpia15, file="tablaLimpia15.csv", sep = ";")
