@@ -33,29 +33,49 @@ tablaDatos <- data.frame(dias = dia, temperaturas = temperaturaLimpia)
 ###############################################################################
 
 #guardo los datos
-write.table(tablaDatos, file="tablajulio15.csv", sep = ";")
+write.table(tablaDatos, file="tablajulio16.csv", sep = ";")
 
 #################################################################################
 
 # a la tabla que importamos le pegamos el mes
-tablajulio15$dias <- paste(tablajulio15$dias,"julio")
+tablajulio16$dias <- paste(tablajulio16$dias,"julio")
 
 #separamos
-variable <- strsplit(tablajulio15$temperaturas,split = "\;")
+variable <- strsplit(tablajulio16$temperaturas,split = "\;")
 
 #cremos lista vacia
 lista <- list()
 
 #optenemos el promedio 
-for(datos in tablajulio15$temperaturas){
+for(datos in tablajulio16$temperaturas){
   datos01 <- (unlist(strsplit(datos,";")))
   datos02 <- as.numeric(datos01)
   lista <- unlist(c(lista,mean(datos02)))
   
 }
 #juntamos la tabla con la lista de promedios 
-tablaLimpia15 <- data.frame(tablajulio15,lista)
+tablaLimpia16 <- data.frame(tablajulio16,lista)
 
 #guardamos
 #guardo los datos
-write.table(tablaLimpia15, file="tablaLimpia15.csv", sep = ";")
+write.table(tablaLimpia16, file="tablaLimpia16.csv", sep = ";")
+
+##############################################################################
+############################### graficos#####################################
+#############################################################################
+
+
+library('ggplot2')
+
+
+#realizamos el grafico de dispercion 
+plot(tablaTotal1$fecha, tablaTotal1$X14.de.julio,
+     main = '14 de julio', xlab = 'Fecha', ylab = 'temp promedio' )
+
+
+#
+
+
+
+
+
