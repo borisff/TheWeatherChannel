@@ -23,4 +23,6 @@ Como  primer objetivo es poder manejar la información que está a nuestra dispo
   
 </ol>
 
+**Nuevos objetivos**
 
+A medida que se avanzó con el desarrollo del trabajo, se elaboraron nuevos objetivos, dejando a un costado lo anteriores. Estos nuevos objetivos son extraer la data relacionada a la predicción de la temperatura de los próximos 14 días y con esta información realizar análisis de estadística descriptiva para cada día  y realizar gráficos para visualizar el comportamiento de las predicciones a medida que se acerca a la fecha  donde se provocara la temperatura real. Todo lo antes mencionado se realizara utilizando en primera instancia el promedio de temperaturas, esperando en un futuro realizar estos análisis tanto a la temperatura máxima como mínima.
