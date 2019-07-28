@@ -33,10 +33,10 @@ tablaDatos <- data.frame(dias = dia, temperaturas = temperaturaLimpia)
 ###############################################################################
 
 #guardo los datos
-write.table(tablaDatos, file="tablajulio22.csv", sep = ";")
+write.table(tablaDatos, file="tablajulio27.csv", sep = ";")
 
 #################################################################################
-
+'
 # a la tabla que importamos le pegamos el mes
 tablajulio16$dias <- paste(tablajulio16$dias,"julio")
 
@@ -121,3 +121,4 @@ datos <- tablaTotal1.2$X16.de.julio[-14]
 datos <- datos[-1]
 desviacionEstandar16 <- sd(datos)
 summary(datos)
+
