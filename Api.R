@@ -17,7 +17,7 @@ contentNuevo <- content(consultaGetNuevas,"text")
 
 jsonNuevo <- jsonlite::fromJSON(contentNuevo)
 
-write_json(jsonNuevo,"todosLosDatos31deJunio")
+write_json(jsonNuevo,"todosLosDatos02DeAgosto")
 
 #################################################################################
 ############################# Del día ###########################################
@@ -30,15 +30,15 @@ lengu = 'es-CL'
 units = 'm'
 
 urlClima <- paste('https://api.weather.com/v2/turbo/vt1observation',token,'&format=',forma,'&geocode=',geoco,'&language=',lengu,'&units=', units,sep = "")
-print(urlClimaDia)
+print(urlClima)
 
-consultaGetNuevasDia <- GET(url = urlClima,format = 'json')#, query = list(apiKey = token, format = forma, geocode = geoco, language = lengu, units = units))  
+consultaGetNuevas <- GET(url = urlClima,format = 'json')#, query = list(apiKey = token, format = forma, geocode = geoco, language = lengu, units = units))  
 contentNuevo <- content(consultaGetNuevas,"text")
 
 
 jsonNuevo <- jsonlite::fromJSON(contentNuevo)
 
-write_json(jsonNuevo,"datoDelDia31DeJulio")
+write_json(jsonNuevo,"datoDelDia02DeAgosto")
 
 
 
