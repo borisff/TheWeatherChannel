@@ -36,89 +36,60 @@ tablaDatos <- data.frame(dias = dia, temperaturas = temperaturaLimpia)
 write.table(tablaDatos, file="tablajulio29.a.csv", sep = ";")
 
 #################################################################################
-'
+
 # a la tabla que importamos le pegamos el mes
 tablajulio16$dias <- paste(tablajulio16$dias,"julio")
-
 #separamos
 variable <- strsplit(tablajulio16$temperaturas,split = "\;")
-
 #cremos lista vacia
 lista <- list()
-
 #optenemos el promedio 
 for(datos in tablajulio16$temperaturas){
-  datos01 <- (unlist(strsplit(datos,";")))
-  datos02 <- as.numeric(datos01)
-  lista <- unlist(c(lista,mean(datos02)))
-  
+datos01 <- (unlist(strsplit(datos,";")))
+datos02 <- as.numeric(datos01)
+lista <- unlist(c(lista,mean(datos02)))
+
 }
 #juntamos la tabla con la lista de promedios 
 tablaLimpia16 <- data.frame(tablajulio16,lista)
-
 #guardamos
 #guardo los datos
 write.table(tablaLimpia16, file="tablaLimpia16.csv", sep = ";")
-
 ##############################################################################
 ############################### graficos#####################################
 #############################################################################
-
-
 library('ggplot2')
 #
-
 ####################################################################
 #
 #as.Date(tablaTotal1.2$X14.de.julio, "%d%b%Y")
-
 ############################################################################
 ###########################14 de julio#####################################
 ##########################################################################
-
 #realizamos el grafico de dispercion 
-
 plot(tablaTotal1.2$fecha, tablaTotal1.2$X14.de.julio,
-     main = '14 de julio', xlab = 'Fecha', ylab = 'temp promedio' )
-
-
+main = '14 de julio', xlab = 'Fecha', ylab = 'temp promedio' )
 #estadistica descriptiva de los datos a estudiar 
-
 summary(tablaTotal1.2$X14.de.julio[-13:-14])
-
 desviacionEstandar14 <- sd(tablaTotal1.2$X14.de.julio[-13:-14])
-
 ##############################################################################
 ###########################15 de julio ################################
 ############################################################################
-
 #realizamos el grafico de dispercion 
-
 plot(tablaTotal1.2$fecha, tablaTotal1.2$X15.de.julio,
-     main = '15 de julio', xlab = 'Fecha', ylab = 'temp promedio' )
-
-
+main = '15 de julio', xlab = 'Fecha', ylab = 'temp promedio' )
 #estadistica descriptiva de los datos a estudiar 
-
 summary(tablaTotal1.2$X15.de.julio[-13:-14])
-
 desviacionEstandar15 <- sd(tablaTotal1.2$X15.de.julio[-13:-14])
-
 ############################################################################
 ########################   16 de julio    #######################################
 ############################################################################
-
 #realizamos el grafico de dispercion 
-
 plot(tablaTotal1.2$fecha, tablaTotal1.2$X16.de.julio,
-     main = '16 de julio', xlab = 'Fecha', ylab = 'temp promedio' )
-
-
+main = '16 de julio', xlab = 'Fecha', ylab = 'temp promedio' )
 #estadistica descriptiva de los datos a estudiar 
-
 summary(tablaTotal1.2$X16.de.julio[-14])
 datos <- tablaTotal1.2$X16.de.julio[-14] 
 datos <- datos[-1]
 desviacionEstandar16 <- sd(datos)
 summary(datos)
-
