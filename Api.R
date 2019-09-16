@@ -17,5 +17,4 @@ contentNuevo <- content(consultaGetNuevas,"text")
 
 jsonNuevo <- jsonlite::fromJSON(contentNuevo)
 
-write_json(jsonNuevo,"todosLosDatos11DeSeptiembre")
-
+write_json(jsonNuevo,"todosLosDatos16DeSeptiembre")
